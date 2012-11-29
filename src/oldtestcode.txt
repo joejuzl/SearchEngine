@@ -1,0 +1,41 @@
+		
+		/*
+		//ParallelSpider mySpider = new ParallelSpider("http://www.cse.ust.hk/~ericzhao/COMP4321/TestPages/testpage.htm",300);
+		Spider mySpider = new Spider("http://www.cse.ust.hk/~ericzhao/COMP4321/TestPages/testpage.htm",300000000);
+		
+		Hashtable<String, LinkRelation> graph;
+		graph = mySpider.crawl();
+		
+		Enumeration<LinkRelation> enumer = graph.elements();		
+		while (enumer.hasMoreElements()){
+			LinkRelation link = enumer.nextElement();
+			System.out.println("--------------------\n"+link.getPageID()+"-URL: " + link.getUrl() +"\n"+ "Children: " );
+			ArrayList<LinkRelation> children = link.getChildren();
+			Iterator<LinkRelation> itc = children.iterator();			
+			while (itc.hasNext()){
+				System.out.println(itc.next().getUrl());
+			}
+			System.out.println("Parents: " );
+			ArrayList<LinkRelation> parents = link.getParents();
+			Iterator<LinkRelation> itp = parents.iterator();			
+			while (itp.hasNext()){
+				System.out.println(itp.next().getUrl());
+			}
+		}
+		
+		
+		/*
+		class MyLinkComparable implements Comparator<LinkRelation>{
+			 
+		    @Override
+		    public int compare(LinkRelation o1, LinkRelation o2) {
+		        return (o1.getRank()>o2.getRank() ? -1 : (o1.getRank()==o2.getRank() ? 0 : 1));
+		    }
+		}
+		
+		System.out.println("\n\n\n PAGERANKS:");
+		PageRank pageRank = new PageRank(graph);
+		pageRank.calcRank();		
+		MyLinkComparable comp = new MyLinkComparable;
+		Collections.sort(graph, comp);
+		*/
